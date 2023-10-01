@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+#include <utility>
+using namespace std;
+using Point = pair<double, double>;
+
+double distance(Point a, Point b){
+    return sqrt((a.first - b.first)*(a.first - b.first) + (a.second - b.second)*(a.second - b.second));
+}
+
+double area(Point a, Point b, Point c) {
+	double distance (Point a,Point b){
+    return sqrt((a.first - b.first)*(a.first - b.first) +(a.second - b.second)*(a.second - b.second));
+}
+double area(Point a, Point b, Point c) {
+
+    double ab = distance(a,b);
+    double ac = distance(a,c);
+    double bc = distance(b,c) ;
+    double p = (ab+bc+ac)/2;
+    return sqrt(p * (p-ab) * (p-bc) * (p-ac));
+}
+}
+
+int main() {
+    cout << setprecision(2) << fixed;
+    cout << area({1, 2}, {2.5, 10}, {15, -5.25}) << endl;
+    return 0;
+}
